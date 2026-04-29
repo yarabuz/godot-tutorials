@@ -13,7 +13,7 @@ function HomepageHeader() {
     <header
       className={clsx('hero hero--primary', styles.heroBanner)}
       style={{
-      backgroundImage: `url('/img/Yarabuz-games-logo.png')`, // Path to your image
+      backgroundImage: `url('/godot-tutorials/img/Yarabuz-games-logo.png')`, // Path to your image
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       }}>

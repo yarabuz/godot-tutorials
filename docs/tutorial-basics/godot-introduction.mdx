@@ -1,0 +1,167 @@
+---
+sidebar_position: 1
+---
+
+# Godot introduction
+
+## Installation
+<hr/>
+
+Go to official website [godotengine.dot](https://godotengine.org)
+<br/>
+It should look something similar to:
+<br/>
+![Godot main page Logo](img/introduction/godot-main-page.png)
+_don't panic, the background image keeps changing_
+<br/>
+
+Click on the button "*Download Latest*":
+<br/>
+![Godot download page](img/introduction/godot-download-page.png)
+
+<br/>
+From here you could:
+- Donwload the version with *GDScript* support (_Recommended_)
+- Download the version with *C#* support
+
+<br/>
+Aditionally if you keep scrolling you will find:
+<br/>
+![Godot alternatives](img/introduction/godot-alternatives.png)
+<br/>
+
+Godot engine is also available on digital distribution platforms like:
+- itch.io
+- Steam
+- Epic Game Store
+- Google Play Store
+<br/>
+
+_Digital store versions do not include .NET/C# support._
+
+<br/>
+
+Once downloaded the file you need to unzipped with anytool like [7-zip](https://www.7-zip.org/)
+<br/>
+
+![Godot unzipped](img/introduction/godot-zipped.png)
+
+<br/>
+And that's it! Use one of the executables (preferably the executable that does not use the console)
+<br/>
+_Aditionally you could create a shortcut and send it to your desktop, or pin it to the taskbar or your start_
+
+<br/>
+Or go with the browser version in [editor.godotengine.org](https://editor.godotengine.org/releases/4.6.2.stable/godot.editor.html)
+
+## First project
+<hr/>
+
+Once you open Godot, you should see the *Project Manager* with all of the project to work with it.
+<br/>
+![Project Manager](img/introduction/godot-project-manager.jpg)
+<br/>
+To start just click on the *Create* and set the next properties:
+- The name of the project
+- The Location in your PC
+- The Render Mode
+- Enable GIT (A source code manager)
+<br/>
+![New Project](img/introduction/godot-new-project.jpg)
+<br/>
+
+- After clicking in *Create* with the "Edit now" option enable you will land in the default view of the Godot Editor:
+<br/>
+![Godot Editor](img/introduction/godot-editor-main-view.jpg)
+<br/>
+- Now you should swith to the "*2D view*" in the top middle.
+<br/>
+![godot-top-middle](img/introduction/godot-top-middle.jpg)
+<br/>
+- Then create your first scene clicking in the button "*2D Scene*" in the scene panel in the left size of your window.
+<br/>
+![godot-scene-panel](img/introduction/godot-scene-panel.jpg)
+<br/>
+- If you doubled click it in the name of your new node, you can change to something like "Main" or "Game", save it in the default name in the root path of your project.
+<br/>
+![save-main-scene](img/introduction/save-main-scene.jpg)
+<br/>
+- Click in the play button in the top-right corner of your window, 
+<br/>
+![godot-top-right-corner](img/introduction/godot-top-right-corner.jpg)
+<br/>
+- Say "*Current scene*"
+<br/>
+![confirm-main-scene](img/introduction/confirm-main-scene.jpg)
+<br/>
+- And watch your game running as a gray window with nothing in it yet
+<br/>
+![new-game-project-debug](img/introduction/new-game-project-debug.jpg)
+<br/>
+- Now, just drag and drop the <code>icon.svg</code> from the "*File System*" panel on the bottom left of the editor into the 2d view
+<br/>
+![drag-and-drop-icon](img/introduction/drag-and-drop-icon.jpg)
+<br/>
+- Now create a new script, clicking the scroll icon in top-right of the scene panel
+<br/>
+![create-new-script](img/introduction/create-new-script.jpg)
+<br/>
+- In the next prompt we can leave all by default
+<br/>
+![new-script-prompt](img/introduction/new-script-prompt.jpg)
+<br/>
+- In the "*Script View*" we need to add 3 Lines of code
+```gdscript
+extends Node2D
+
+@onready var icon: Sprite2D = $Icon
+
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("ui_accept"):
+		icon.rotate(90)
+```
+<br/>
+- And with all this, if we try to run the game, every time with hit 'enter' the sprite icon it will rotate 90°
+<br/>
+![new-game-project-debug-rotate](img/introduction/new-game-project-debug-rotate.jpg)
+
+
+## Reasons
+<hr/>
+
+### Easy to Learn
+Godot Engine was designed with simplicity in mind, offering a clean interface and a gentle learning curve, especially for beginners with little or no programming experience.
+
+### Scene-Based Design
+Godot uses a flexible scene system that lets you build games by composing reusable pieces, making it easy to organize projects and scale them over time.
+
+### Free and Open Source
+Godot is completely free with no royalties or licensing fees, giving you full access to the engine’s source code and total control over your projects.
+
+### Lightweight and Fast
+The engine is small in size and runs efficiently even on modest hardware, allowing quick downloads and smooth performance during development.
+
+### Flexible Scripting Options
+You can use its native language GDScript, or alternatives like C#, depending on your background and needs.
+
+### Cross-Platform Deployment
+Export your games to multiple platforms including PC, mobile, and web from a single project without major changes.
+
+### Active Community
+A growing global community contributes tutorials, plugins, and support, making it easier to find help and resources when needed.
+
+### No External Dependencies
+Godot is self-contained, meaning you don’t need to install heavy external tools to get started building your game.
+
+
+<hr/>
+
+<iframe
+  width="100%"
+  height="400"
+  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+  title="YouTube video player"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+/>

@@ -1,0 +1,280 @@
+---
+sidebar_position: 4
+---
+
+# GDSCript Basics - Part II
+
+## Continuing where we left
+
+You can edit this mind map in Mermaid Live Editor -> [here](https://mermaid.live/edit#pako:eNqFVm1vIjcQ_ivuVoqWHkk2gZSArlGTcIlQgUhH2g8V0sl4Z3etM_ae7SVwufz3Gy-h2Eui7ic8L8_YM_PM8BwxlUI0iJZcpktazvVcEqKVsnF8P5wxzUvbam2lhNxQw5nZnQh5hLUlGRdATG2514xkCtJSy5XcC2_VcolSD-DO-c6srpitNOzln8GAXkFK_oLNk9Kp5zIEJqiukcnKkE9rYFUYhpAxz4CwDRP_Qf5DNacLAYYckcdNCR7glOLbc7ycXOHlEMn4UDNJvwK5pQYOPPCSVnN24HLHtbFEgLWgfTneq5aRTKslocffQ2WFKdOGKT8PLhNL6oJt4cxbeOYdwGm1XGC05Lj__4FmTJVB3LFiVPiCW0GNIRNwmL78XqiFb4nZxfv6FsONxIQxEq-obgW5dQ2ylZP1gHBpA7WrEzZSBhokCy7HMOOWBp00pJY2K_vasI2scHE6rYQ4yBXopilxV4K8WUVCMqGoDYWOCk0zbOxGKrA5BM1N03ChVHCf63RFG09GodZ003AdbtsPm3v_7ocSkB7K75W_0WITBDA8l1sOxX-0SFDnV5KS-NdQMXKM5nZD4g-hYgr5K9Q8Op5HvvKGH0TW3BZLsM1cX6cpdyCnyENGLexu96EV2s2qhdWUvRPPfZNKWF4Kzl4RfmsaDPmKm1p12lRt2Yb0IPGPpu6GW2IKntmDmjoiZpbEHz82fRCR5wWqrq6aKsxziXUz4eRy36dvFRXmoDA12TRQN0Hiq_d1tqD4tKs3vMeADH7LtVa87TdW-UGppkMSHx01YR4-Y9IOsjZ9eCTxL3spltdqJZAH6snfDHJbfny478-z8HQMwgS0ABGaTHEm49oYZR7MWKkyQM1UwOinggsPdEItK-rZBI4IO8VdJZujfggZl7y5fHaGvmwCtlCpv99w30ncSqLyB9a1zqvGhnSrLNhk7vuCpU4DWn0ptWJYxVBWbNy-buruVaosucNuwZ3reczcTHCNB0tu227ISmD-SP4T1qXS2M0jaUpUKX-cj2SBE9S6uYUIa2RwalrBRleVRt1Y0RQZFLWjXPM0GuDyh3aE0xeZh8fo2XnMI1tg9ufRAH-mVH-dR3P5gj4llf8qtdy5aVXlxe5QlSnWbMhpruneAhydb1UlbTQ4u6gRosFztMZT5_Kk3096vYvuRaeTdDrtaIPS30-SpJt0zy-T_nnnrJecv7Sj73XM5KTfO0NZv9PrJpfdbu-8HQH2rdKT7Z-o-r_Uy09TyrCj)
+<br/>
+![Gdscript Mindmap](img\gdscript-basics\gdscript-mindmap2.jpg)
+<br/>
+<hr/>
+## Operator Asignation (_=_)
+
+```gdscript
+var left_hand_side = right_hand_side
+```
+<br/>
+![Gdscript Mindmap](img\gdscript-basics\lhs-vs-rhs.jpg)
+
+### Mathematical Shorthand Operators
+
+GDScript supports standard augmented assignment operators.<br/>
+These mathematical shorthand operators let you modify a variable's value and assign it back in a single step.<br/>
+
+- Increment _+=_
+```gdscript
+var coins : int = 0
+
+coins = coins + 15
+# or
+coins += 15
+```
+<br/>
+- Decrement _-=_
+```gdscript
+var potions : int = 0
+
+potions = potions - 1
+# or
+potions -= 1
+```
+<br/>
+- Multiplication _*=_
+```gdscript
+var score : int = 0
+
+score = score * 2
+# or
+score += 2
+```
+<br/>
+- Division _/=_
+
+```gdscript
+var width : int = 0
+
+width = width / 2
+# or
+width /= 2
+```
+<br/>
+- Modulus(Remainder) _%=_
+
+```gdscript
+var current_weapon : int = 0
+
+# if it reaches 5, your modulus is 5, automatic restart
+
+current_weapon = current_weapon % 5
+# or
+current_weapon %= 5
+```
+<br/>
+- Exponentiation _**=_
+
+```gdscript
+var experience : float = 0
+
+# The requirement increases in a curved fashion, becoming more difficult
+
+experience = pow(experience, 1.2)
+# or
+experience **= 1.2
+```
+<br/>
+
+## Conditional operators:
+
+<br/>
+![Conditional Operators](img\gdscript-basics\conditional-operators.jpg)
+<br/>
+Conditional operators controls the flow of the code. It determine where to continue next.
+<br/>
+There are a couple of reserved keywords to add to our dictionary:
+- IF
+    - <code>if condition_to_evalute:</code>
+- ELSE
+    - <code>else:</code>
+- ELIF
+    - <code>elif another_contion:</code>
+<br/>
+
+### IF
+New structure: The reserved keyword IF, followed by any boolean statement and a colon. <br/>
+This creates a new block of code marked by a new indent segment, and everything you put inside this block
+ will only execute if the preceding boolean statement is true.<br/>
+ Otherwise, it will be ignored, and pretend as if it doesn't exist.
+
+<br/>
+![If statement](img\gdscript-basics\if-statement.jpg)
+<br/>
+### ELSE
+Introducing the Else statement.<br/>
+This is the new structure to remember:<br/>
+the reserved keyword “else” followed only by a colon, a new line with a new ident segment.<br/>
+“Else” can not be declared alone, it should be preceded by an “If” statement and in the same level of indentation.<br/>
+The “If” statement could be alone but not in the case of the “Else” statement.<br/>
+
+```gdscript
+    if distance_to_bed < 3:
+        pass
+    else:
+        print("You may not rest now, the bed is too far away")
+```
+_Here the reserved keyword "<code>pass</code>" doesn't nothing other than tell to the compiler that it is OK close the block of code created for this "If" statement without any content, "just bare wih me"._
+<br/>
+### Nesting IFs
+Inside the first "If" statement we can "nest" a new "If" statement asking if is it nigh time?<br/>
+And if is not, show the message: "You can sleep only at night"<br/>
+```
+    if distance_to_bed < 3:
+        if  is_night_time:
+            print("Sweet dreams!")
+        else:
+            printraw("You can sleep only at night ")
+            print("or during thunderstorms")
+    else:
+        print("You may not rest now, the bed is too far away")
+```
+<br/>
+_Here the method <code>printraw</code> what it does is printing to the console without creating a new line, so in the next line of code we can make another printing and write the rest of the message._
+### ELIF
+
+But what if you want to chain differents conditions in a row?<br/>
+Just for that we can use another reserved keyword "<code>elif</code>"<br/>
+
+<code>Elif</code> has the peculiarity of only being check if the previous checking was a false statement.<br/>
+In other words, if you know that is night time already, there is no need to check for the weather.<br/>
+and also "<code>elif</code>" can not be alone, because is like a second or third condition.<br/>
+Same case as "<code>Else</code>" is the otherwise and second or third condition and requires a starting point.
+
+
+```
+    if distance_to_bed < 3:
+        if  is_night_time:
+            print("Sweet dreams!")
+        elif is_weather_thunder:
+            print("Sweet Dreams")
+        elif are_monster_nearby:
+            print("You may not rest now, there are monsters nearby")
+        else:
+            printraw("You can sleep only at night ")
+            print("or during thunderstorms")
+    else:
+        print("You may not rest now, the bed is too far away")
+```
+
+<br/>
+## Logical operators:
+![Logical Operators](img\gdscript-basics\logical-operators.jpg)
+<br/>
+In Godot's GDScript, logical operators evaluate Boolean conditions to manage game logic flow.<br/>
+You can use it simbol form or word form.<br/>
+- AND
+    - <code>&&</code> <code>and</code>
+- OR
+    - <code>||</code> <code>or</code>
+- NOT
+    - <code>!</code> <code>not</code>
+
+<br/>
+What these word made is conect to condition together and create a new boolean value following a couple a rules, known as truth tables.<br/><br/>
+for <code>AND</code> all values needs to be true for the output to be true. if any is false, the output is false<br/>
+For <code>OR</code> any value needs to be true in order to the output to be true, with just one, we no care about the rest of condition.<br/>
+<code>NOT</code> simply change a condition from true to false or the other way around.<br/>
+
+### AND (&&)
+For example we could ask a question if is_night_time and also and at the same time you are less than 2 blocks away from the bed, you could procced to sleep.<br/>
+```gdscript
+    if is_night_time and distance_to_bed < 3:
+        print("Sweet Dreams")
+    else:
+        print("You can sleep only at night")
+        print("You may not rest now, the bed is too far away")
+```
+<br/>
+In this case both conditions needs to be true in order to have a sweet dreams 
+but if is not night time or you are too far away from your bed or both conditions are false then the entire if statement if false and therfore we go to the else statement.<br/>
+### OR (||)
+Now can check at the same time if it is night time or if the weather is thunderstorm in order to allow the player to sleep.<br/>
+```gdscript
+    if distance_to_bed < 3:
+        if  is_night_time or is_weather_thunder:
+            print("Sweet Dreams")
+        elif are_monster_nearby:
+            print("You may not rest now, there are monsters nearby")
+        else:
+            printraw("You can sleep only at night ")
+            print("or during thunderstorms")
+    else:
+        print("You may not rest now, the bed is too far away")
+```
+### NOT (!)
+We cann another <code>If</code> statement, just below the first one. this one will act as a separate check, no matter what happen before it start all over again.<br/>
+we have a boolean var called is_spawn_point_set and it will act as a flag, intially is false so we need to negate this one with a not operator.<br/>
+Then inmediatily change to true so it will enter the first unless other parts of the code changes this value again.<br/>
+```gdscript
+    if distance_to_bed < 2:
+        if  is_night_time or is_weather_thunder:
+            print("Sweet Dreams")
+        elif are_monster_nearby:
+            print("You may not rest now, there are monsters nearby")
+        else:
+            print("You can sleep only at night")
+    else:
+        print("You may not rest now, the bed is too far away")
+
+    if not is_spawn_point_set:
+        spawn_point_set = true
+        print("Spawn point set")
+```
+
+## Warnings:
+
+You could add as much <code>IF</code><code>Elif</code><code>Else</code> statement as you need but be aware that adding too much checkers, especially nesting ifs, it will dificult the reading of the code. <br/>
+
+For example, if you have to check every single time a condition alongside the rest, you could extract that condition as a common factor and then negate it to execute its behavoir.
+```gdscript
+    if is_in_overworld and distance_to_bed < 2:
+        if  is_night_time or is_weather_thunder:
+            print("Sweet Dreams")
+        elif are_monster_nearby:
+            print("You may not rest now, there are monsters nearby")
+        else:
+            print("You can sleep only at night")
+    else:
+        if is_in_overworld:
+        print("Died by Intentional Game Design")
+        else:
+            print("You may not rest now, the bed is too far away")
+    
+    if not is_spawn_point_set:
+        is_spawn_point_set = true
+        print("Spawn point set")
+```
+
+```gdscript
+    if not is_in_overworld:
+        print("Died by Intentional Game Design")
+        
+    if distance_to_bed < 2:
+        if  is_night_time or is_weather_thunder:
+            print("Sweet Dreams")
+        elif are_monster_nearby:
+            print("You may not rest now, there are monsters nearby")
+        else:
+            print("You can sleep only at night")
+    else:
+        print("You may not rest now, the bed is too far away")
+    
+    if not is_spawn_point_set:
+        spawn_point_set = true
+        print("Spawn point set")
+```
+
+### External Resource
+
+For this second tutorial I use [https://gd.tumeo.space/](https://gd.tumeo.space/)
